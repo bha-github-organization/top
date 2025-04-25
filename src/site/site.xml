@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site xmlns="http://maven.apache.org/SITE/2.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd"
+      name="Top Level Parent POM">
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>${skin.fluido.version}</version>
+  </skin>
+  <bannerLeft name="Top Level Parent POM"/>
+  <publishDate position="right"/>
+  <version position="right"/>
+  <body>
+    <links>
+      <item name="Maven" href="https://maven.apache.org/"/>
+      <item name="Beacon Hill" href="https://www.beaconhill.com/"/>
+    </links>
+
+    <menu name="Overview">
+      <item name="Introduction" href="index.html"/>
+      <item name="Usage" href="usage.html"/>
+      <item name="FAQ" href="faq.html"/>
+    </menu>
+
+    <menu ref="reports"/>
+    <menu ref="parent"/>
+    <menu ref="modules"/>
+
+    <footer>Copyright &amp;copy; ${project.inceptionYear}-${currentYear} Beacon Hill &amp; Associates, Inc. All rights reserved.</footer>
+  </body>
+</site>
