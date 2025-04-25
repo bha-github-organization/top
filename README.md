@@ -59,10 +59,6 @@ To use this workflow, you need to:
 
 The workflow uses GitHub's official actions for Pages deployment and doesn't require any additional secrets.
 
-## License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
 ## Author
 
 Dan Rollo
