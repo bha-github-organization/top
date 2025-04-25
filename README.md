@@ -63,6 +63,7 @@ The workflow uses GitHub's official actions for Pages deployment and doesn't req
 
 ## TODO
 
+- Publish to maven central
 - Add more common dependencies to dependency management section
 - Create example child POM to demonstrate usage
 - Add code quality plugins (e.g., SpotBugs, PMD, Checkstyle)
