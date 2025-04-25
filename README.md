@@ -61,6 +61,15 @@ To use this workflow, you need to:
 
 The workflow uses GitHub's official actions for Pages deployment and doesn't require any additional secrets.
 
+## TODO
+
+- Add more common dependencies to dependency management section
+- Create example child POM to demonstrate usage
+- Add code quality plugins (e.g., SpotBugs, PMD, Checkstyle)
+- Configure release plugin for automated releases
+- Add more documentation on how to extend this parent POM
+- Set up SonarQube integration for code quality analysis
+
 ## Author
 
 Dan Rollo
