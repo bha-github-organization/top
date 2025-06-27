@@ -19,7 +19,7 @@ on:
         required: false
 
 jobs:
-  publish:
+  publish-central:
     runs-on: ubuntu-latest
 
     steps:
