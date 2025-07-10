@@ -7,13 +7,55 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <name>Top level Parent pom</name>
   <description>Top level Parent pom. A reusable parent pom for maven projects.</description>
+  <url>https://github.com/bha-github-organization/top</url>
+
   <organization>
     <name>Beacon Hill &amp; Associates, Inc.</name>
+    <url>https://bhaweb.com</url>
   </organization>
 
-  <distributionManagement>
-    <!-- remote repo into which to publish output from this project -->
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Dan Rollo</name>
+      <email>danrollo@example.com</email>
+      <organization>Beacon Hill &amp; Associates, Inc.</organization>
+      <organizationUrl>https://bhaweb.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/bha-github-organization/top.git</connection>
+    <developerConnection>scm:git:ssh://github.com:bha-github-organization/top.git</developerConnection>
+    <url>https://github.com/bha-github-organization/top</url>
+  </scm>
+
+  <!--<distributionManagement>-->
+    <!-- Maven Central via OSSRH -->
+    <!--
+    <repository>
+      <id>ossrh</id>
+      <name>Central Repository OSSRH</name>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    -->
+
+    <!-- Legacy Nexus repository (kept for reference) -->
+    <!--
     <repository>
       <id>bha-maven-repo</id>
       <url>https://pinginx.dannyrollo.com/nexus/repository/bha-maven-repo/</url>
@@ -22,7 +64,8 @@
       <id>bha-maven-repo-snapshot</id>
       <url>https://pinginx.dannyrollo.com/nexus/repository/bha-maven-repo-snapshot/</url>
     </snapshotRepository>
-  </distributionManagement>
+    -->
+  <!--</distributionManagement>-->
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
@@ -32,6 +75,11 @@
     <skin.fluido.version>2.1.0</skin.fluido.version>
     <!-- the fludio skin version 2.1+ requires doxia versions 2+ in the site plugins -->
     <doxia.version>2.0.0</doxia.version>
+
+    <!-- Maven Central deployment properties -->
+    <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+    <maven-gpg-plugin.version>3.2.2</maven-gpg-plugin.version>
+    <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
   </properties>
 
   <build>
@@ -144,7 +192,71 @@
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-javadoc-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>${maven-gpg-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                <!-- Prevent gpg from using pinentry programs -->
+                <gpgArguments>
+                  <arg>--pinentry-mode</arg>
+                  <arg>loopback</arg>
+                </gpgArguments>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>0.8.0</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+            <autoPublish>true</autoPublish>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
+
+    <plugins>
+      <!-- Plugins that will be executed for all projects using this parent -->
+      <!--
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+      </plugin>
+      -->
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>
