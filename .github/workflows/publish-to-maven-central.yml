@@ -50,10 +50,10 @@ jobs:
       run: |
         if [ -z "${{ github.event.inputs.release_version }}" ]; then
           # Snapshot deployment
-          ./mvnw deploy
+          ./mvnw deploy -s .github/workflows/ci-settings.xml
         else
           # Release deployment
-          ./mvnw deploy -P release
+          ./mvnw deploy -P release -s .github/workflows/ci-settings.xml
         fi
       env:
         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
