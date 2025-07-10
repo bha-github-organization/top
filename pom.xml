@@ -4,7 +4,7 @@
 
   <groupId>com.bhaweb.pom</groupId>
   <artifactId>top</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <name>Top level Parent pom</name>
@@ -37,6 +37,7 @@
     <connection>scm:git:git://github.com/bha-github-organization/top.git</connection>
     <developerConnection>scm:git:ssh://github.com:bha-github-organization/top.git</developerConnection>
     <url>https://github.com/bha-github-organization/top</url>
+    <tag>top-1.0.0</tag>
   </scm>
 
   <!--<distributionManagement>-->
@@ -178,8 +179,8 @@
                   <requireJavaVersion>
                     <version>17</version>
                   </requireJavaVersion>
-                  <banDuplicatePomDependencyVersions/>
-                  <dependencyConvergence/>
+                  <banDuplicatePomDependencyVersions />
+                  <dependencyConvergence />
                   <requirePluginVersions>
                     <message>Best Practice is to always define plugin versions!</message>
                     <banLatest>true</banLatest>
