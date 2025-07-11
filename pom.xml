@@ -4,18 +4,16 @@
 
   <groupId>com.bhaweb.pom</groupId>
   <artifactId>top</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0y-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Top level Parent pom</name>
   <description>Top level Parent pom. A reusable parent pom for maven projects.</description>
   <url>https://github.com/bha-github-organization/top</url>
-
   <organization>
     <name>Beacon Hill &amp; Associates, Inc.</name>
     <url>https://bhaweb.com</url>
   </organization>
-
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -66,7 +64,6 @@
     </snapshotRepository>
     -->
   <!--</distributionManagement>-->
-
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
@@ -244,7 +241,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
     <plugins>
       <!-- Plugins that will be executed for all projects using this parent -->
       <!--
@@ -259,4 +255,29 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>central-snapshots</id>
+      <activation>
+        <property>
+          <name>project.version</name>
+          <value>.*-SNAPSHOT</value>
+        </property>
+      </activation>
+      <repositories>
+        <repository>
+          <id>central-portal-snapshots</id>
+          <name>Central Portal Snapshots</name>
+          <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
 </project>
