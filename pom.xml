@@ -4,7 +4,7 @@
 
   <groupId>com.bhaweb.pom</groupId>
   <artifactId>top</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Top level Parent pom</name>
@@ -36,7 +36,7 @@
   <scm>
     <connection>scm:git:git://github.com/bha-github-organization/top.git</connection>
     <developerConnection>scm:git:ssh://github.com:bha-github-organization/top.git</developerConnection>
-    <url>scm:git:ssh://git@github.com/bha-github-organization/top.git</url>
+    <url>https://github.com/bha-github-organization/top</url>
   </scm>
 
   <!--<distributionManagement>-->
