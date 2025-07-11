@@ -36,7 +36,7 @@
   <scm>
     <connection>scm:git:git://github.com/bha-github-organization/top.git</connection>
     <developerConnection>scm:git:ssh://github.com:bha-github-organization/top.git</developerConnection>
-    <url>https://github.com/bha-github-organization/top</url>
+    <url>scm:git:git@github.com:bha-github-organization/top.git</url>
     <tag>top-1.0.1</tag>
   </scm>
 
