@@ -47,7 +47,7 @@ jobs:
         ./mvnw versions:commit
 
     - name: Publish to Maven Central
-      if: ${{ env.GITHUB_ACTIONS == 'true' }}
+      if: ${{ github.actions == 'true' }}
       run: |
         if [ -z "${{ github.event.inputs.release_version }}" ]; then
           # Snapshot deployment
