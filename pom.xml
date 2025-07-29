@@ -10,12 +10,10 @@
   <name>Top level Parent pom</name>
   <description>Top level Parent pom. A reusable parent pom for maven projects.</description>
   <url>https://github.com/bha-github-organization/top</url>
-
   <organization>
     <name>Beacon Hill &amp; Associates, Inc.</name>
     <url>https://bhaweb.com</url>
   </organization>
-
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -66,7 +64,6 @@
     </snapshotRepository>
     -->
   <!--</distributionManagement>-->
-
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
@@ -244,7 +241,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
     <plugins>
       <!-- Plugins that will be executed for all projects using this parent -->
       <!--
