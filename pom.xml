@@ -10,12 +10,10 @@
   <name>Top level Parent pom</name>
   <description>Top level Parent pom. A reusable parent pom for maven projects.</description>
   <url>https://github.com/bha-github-organization/top</url>
-
   <organization>
     <name>Beacon Hill &amp; Associates, Inc.</name>
     <url>https://bhaweb.com</url>
   </organization>
-
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -67,7 +65,6 @@
     </snapshotRepository>
     -->
   <!--</distributionManagement>-->
-
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
@@ -243,11 +240,28 @@
             <autoPublish>true</autoPublish>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>tidy-maven-plugin</artifactId>
+          <version>1.4.0</version>
+          <executions>
+            <execution>
+              <id>validate</id>
+              <phase>validate</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
-
     <plugins>
       <!-- Plugins that will be executed for all projects using this parent -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>tidy-maven-plugin</artifactId>
+      </plugin>
       <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
