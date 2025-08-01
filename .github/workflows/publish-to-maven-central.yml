@@ -40,6 +40,11 @@ jobs:
     - name: Build and Test with Maven
       run: ./mvnw clean test
 
+    - name: Prepare package signature
+      run: ./mvnw verify
+      env:
+        MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
     - name: Set Release Version
       if: github.event.inputs.release_version != ''
       run: |
