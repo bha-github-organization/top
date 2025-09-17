@@ -12,7 +12,7 @@
   <url>https://github.com/bha-github-organization/top</url>
   <organization>
     <name>Beacon Hill &amp; Associates, Inc.</name>
-    <url>https://bhaweb.com</url>
+    <url>https://pinginx.dannyrollo.com/</url>
   </organization>
   <licenses>
     <license>
@@ -27,7 +27,7 @@
       <name>Dan Rollo</name>
       <email>danrollo@example.com</email>
       <organization>Beacon Hill &amp; Associates, Inc.</organization>
-      <organizationUrl>https://bhaweb.com</organizationUrl>
+      <organizationUrl>https://pinginx.dannyrollo.com/</organizationUrl>
     </developer>
   </developers>
 
