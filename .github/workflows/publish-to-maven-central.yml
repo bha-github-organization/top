@@ -20,6 +20,8 @@ on:
 
 jobs:
   gpg-sign:
+#    Remove the if statement below for local testing with act
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
