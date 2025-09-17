@@ -19,7 +19,7 @@ on:
         required: false
 
 jobs:
-  gpg-sign:
+  gpg-sign-test:
 #    Remove the if statement below for local testing with act
     if: false
     runs-on: ubuntu-latest
