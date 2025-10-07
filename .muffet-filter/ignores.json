@@ -12,7 +12,7 @@
     "error": "404"
   },
   {
-    "url": "https://github.github.com/.*",
+    "url": "https://github.com/bha-github-organization/top/search?l=shell",
     "error": "429"
   }
 ]
