@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://github.com/.*",
+    "error": "id .* not found"
+  },
+  {
+    "url": "https://github.com/marketplace",
+    "error": "400"
+  },
+  {
+    "url": "https://github.githubassets.com/",
+    "error": "404"
+  },
+  {
+    "url": "https://github.github.com/.*",
+    "error": "429"
+  }
+]
