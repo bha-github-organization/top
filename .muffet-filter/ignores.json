@@ -14,5 +14,9 @@
   {
     "url": "https://github.com/bha-github-organization/top/search?l=shell",
     "error": "429"
+  },
+  {
+    "url": "https://github.com/bha-github-organization/top/commits/main/",
+    "error": "429"
   }
 ]
