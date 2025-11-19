@@ -20,7 +20,7 @@
     "error": "429"
   },
   {
-    "url": "https://opengraph.githubassets.com/9c990cd1215ebe0107ea7c05712c318173d6295ffb865e09a2e734e1303e209c/bha-github-organization/top",
+    "url": "https://opengraph.githubassets.com/.*",
     "error": "429"
   }
 ]
