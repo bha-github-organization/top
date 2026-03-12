@@ -5,6 +5,8 @@
 
 A reusable parent pom for maven projects.
 
+One such project using this pom as a parent is: [UTest](https://github.com/bha-github-organization/utest)
+
 ## Features
 
 - Defines common project properties and dependencies
