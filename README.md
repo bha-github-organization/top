@@ -112,6 +112,22 @@ The workflow will:
 4. Deploy to Maven Central
 5. Automatically release the staging repository if all checks pass
 
+## TIPS
+
+1. Show dependency and plugin updates via:
+   ```bash
+   ./mvnw versions:display-plugin-updates
+   ./mvnw versions:display-dependency-updates
+   ```
+   Update to the latest release version of dependencies via: 
+   ```bash
+   ./mvnw versions:use-latest-releases
+   ```
+   Update to the latest release version of dependencies versioned using properties via: 
+   ```bash
+   ./mvnw versions:update-properties
+   ```
+
 ## TODO
 
 - Add more common dependencies to dependency management section
