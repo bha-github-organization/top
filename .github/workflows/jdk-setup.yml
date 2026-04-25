@@ -1,0 +1,19 @@
+name: JDK Setup
+
+on:
+  workflow_call:
+    inputs:
+      java-version:
+        default: '25'
+        required: false
+        type: string
+
+jobs:
+  setup-jdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v5
+        with:
+          java-version: ${{ inputs.java-version }}
+          distribution: 'temurin'
+          cache: 'maven'
