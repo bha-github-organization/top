@@ -6,22 +6,12 @@ inputs:
     required: false
     type: string
 
-using: composite
-
-on:
-  workflow_call:
-    inputs:
-      java-version:
-        default: '25'
-        required: false
-        type: string
-
-jobs:
-  setup-jdk:
-    runs-on: composite
-    steps:
+runs:
+  using: composite
+  steps:
       - uses: actions/setup-java@v5
         with:
           java-version: ${{ inputs.java-version }}
           distribution: 'temurin'
           cache: 'maven'
+
