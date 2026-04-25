@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup-jdk:
-    runs-on: ubuntu-latest
+    runs-on: composite
     steps:
       - uses: actions/setup-java@v5
         with:
