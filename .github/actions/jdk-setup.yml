@@ -1,5 +1,13 @@
 name: JDK Setup
 
+inputs:
+  java-version:
+    default: '25'
+    required: false
+    type: string
+
+using: composite
+
 on:
   workflow_call:
     inputs:
