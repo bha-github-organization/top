@@ -71,7 +71,7 @@
 
     <skin.fluido.version>2.1.0</skin.fluido.version>
     <!-- the fludio skin version 2.1+ requires doxia versions 2+ in the site plugins -->
-    <doxia.version>2.0.0</doxia.version>
+    <doxia.version>2.1.0</doxia.version>
 
     <!-- Maven Central deployment properties -->
     <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
