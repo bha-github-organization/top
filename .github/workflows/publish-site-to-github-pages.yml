@@ -29,8 +29,6 @@ jobs:
       
       - name: Set up JDK via custom action
         uses: ./.github/actions/setup-jdk
-        with:
-          java-version: '25'
 
       - name: Build site with Maven
         run: ./mvnw clean site
