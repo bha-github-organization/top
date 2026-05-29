@@ -30,7 +30,7 @@ jobs:
         java-version: ${{ matrix.java }}
 
     - name: Lint with Maven Enforcer
-      run: ./mvnw validate -Denforcer.skip=false
+      run: ./mvnw -Pbha-internal-repo validate -Denforcer.skip=false
 
     - name: Build and Test with Maven
-      run: ./mvnw clean site
+      run: ./mvnw -Pbha-internal-repo clean site -Pbha-internal-repo
