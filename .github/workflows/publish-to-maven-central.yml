@@ -46,6 +46,8 @@ jobs:
     - uses: actions/checkout@v6
     - name: Set up JDK via custom action
       uses: ./.github/actions/setup-jdk
+      with:
+        gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
 
 #    Note: When the GPG key expires, the resulting error may be misleading, and look like this:
 #      [INFO] Signer 'gpg' is signing 1 file with key default
