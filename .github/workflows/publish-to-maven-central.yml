@@ -28,7 +28,9 @@ jobs:
       - name: Set up JDK via custom action
         uses: ./.github/actions/setup-jdk
       - name: Create GPG key file from secret
-        run: echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode > gpg-private.key
+        env:
+          MAVEN_GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: echo "$MAVEN_GPG_PRIVATE_KEY" | base64 --decode > gpg-private.key
       - name: Import GPG key file and delete file
         run: gpg --batch --import gpg-private.key && rm -f gpg-private.key
       - name: List GPG keys
@@ -48,7 +50,9 @@ jobs:
       uses: ./.github/actions/setup-jdk
 
     - name: Create GPG key file from secret
-      run: echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode > gpg-private.key
+      env:
+        MAVEN_GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      run: echo "$MAVEN_GPG_PRIVATE_KEY" | base64 --decode > gpg-private.key
     - name: Import GPG key file and delete file
       run: gpg --batch --import gpg-private.key && rm -f gpg-private.key
 #    Note: When the GPG key expires, the resulting error may be misleading, and look like this:
