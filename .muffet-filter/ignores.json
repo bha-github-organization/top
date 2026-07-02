@@ -20,6 +20,10 @@
     "error": "429"
   },
   {
+    "url": "https://github.com/bha-github-organization/top/projects",
+    "error": "400"
+  },
+  {
     "url": "https://opengraph.githubassets.com/.*",
     "error": "429"
   },
