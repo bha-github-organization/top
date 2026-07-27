@@ -25,6 +25,6 @@
     <menu ref="parent"/>
     <menu ref="modules"/>
 
-    <footer>Copyright &amp;copy; ${project.inceptionYear}-${currentYear} Beacon Hill &amp; Associates, Inc. All rights reserved.</footer>
+    <footer>Copyright &amp;copy; ${project.inceptionYear} Beacon Hill &amp; Associates, Inc. All rights reserved.</footer>
   </body>
 </site>
