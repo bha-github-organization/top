@@ -10,6 +10,7 @@
   <name>Top level Parent pom</name>
   <description>Top level Parent pom. A reusable parent pom for maven projects.</description>
   <url>https://github.com/bha-github-organization/top</url>
+  <inceptionYear>2007</inceptionYear>
   <organization>
     <name>Beacon Hill &amp; Associates, Inc.</name>
     <url>https://pinginx.dannyrollo.com/</url>
