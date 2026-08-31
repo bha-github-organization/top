@@ -130,6 +130,21 @@ The workflow will:
    ./mvnw versions:update-properties
    ```
 
+2. Run GitHub Actions (CI) locally on recent versions of MacOS on Apple silicon using Apple Container managed by
+   Podman via the Apple Container extension by first running the command below:
+   ```bash
+   export DOCKER_HOST="unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')"
+   ```
+   This above command allows use of the Docker Test API as implemented by Apple Container. Nifty.
+   Some one-time setup notes are collected below.
+   ```bash
+   brew install podman
+   podman machine init --provider applehv
+   podman machine start
+   brew install podman-desktop
+   #Now install Podman Desktop Apple Container extension via the Extensions tab in Podman Desktop UI.
+   ```
+
 ## TODO
 
 - Add more common dependencies to dependency management section
