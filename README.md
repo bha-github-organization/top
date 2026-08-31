@@ -17,15 +17,15 @@ This project uses GitHub Actions for continuous integration and deployment:
 
 ### PR Test Workflow
 
-The PR Test workflow runs automatically when a pull request is created or updated against the main branch. It ensures that all tests pass before the PR can be merged.
+The [PR Test](.github/workflows/pr-test.yml) workflow runs automatically when a pull request is created or updated against the main branch. It ensures that all tests pass before the PR can be merged.
 
 ### Publish to Nexus Workflow
 
-The Publish to Nexus workflow runs automatically when code is pushed to the main branch (which happens when a PR is merged). It builds the project, runs the tests, and if all tests pass, it publishes the JAR to a private Nexus Repository Manager.
+The [Publish to Nexus](.github/workflows/publish-to-nexus.yml) workflow runs automatically when code is pushed to the main branch (which happens when a PR is merged). It builds the project, runs the tests, and if all tests pass, it publishes the JAR to a private Nexus Repository Manager.
 
 #### Required Secrets
 
-To use the Publish to Nexus workflow, you need to set up the following secrets in your GitHub repository:
+To use the [Publish to Nexus](.github/workflows/publish-to-nexus.yml) workflow, you need to set up the following secrets in your GitHub repository:
 
 - `NEXUS_USERNAME`: Username for Nexus authentication
 - `NEXUS_PASSWORD`: Password for Nexus authentication
@@ -51,7 +51,7 @@ The Nexus repository URLs are configured in the `pom.xml` file. Update these URL
 
 ### Publish Site to GitHub Pages Workflow
 
-The Publish Site to GitHub Pages workflow runs automatically when code is pushed to the main branch. It builds the Maven site and publishes it to GitHub Pages, making the documentation accessible via a web browser.
+The [Publish Site to GitHub Pages](.github/workflows/publish-site-to-github-pages.yml) workflow runs automatically when code is pushed to the main branch. It builds the Maven site and publishes it to GitHub Pages, making the documentation accessible via a web browser.
 
 #### GitHub Pages Setup
 
@@ -84,7 +84,7 @@ This project is configured to publish to Maven Central via the Sonatype OSSRH (O
 
 ### GitHub Secrets Setup
 
-To use the Publish to Maven Central workflow, set up the following secrets in your GitHub repository:
+To use the [Publish to Maven Central](.github/workflows/publish-to-maven-central.yml) workflow, set up the following secrets in your GitHub repository:
 
 - `OSSRH_USERNAME`: Username for Sonatype OSSRH
 - `OSSRH_PASSWORD`: Password for Sonatype OSSRH
