@@ -1,17 +1,20 @@
 name: JDK Setup
+description: Setup JDK for GitHub Actions using a default version and distribution
 
 inputs:
   java-version:
     default: '25'
     required: false
-    type: string
+    description: JDK version
 
 runs:
   using: composite
   steps:
-      - uses: actions/setup-java@v6
-        with:
-          java-version: ${{ inputs.java-version }}
-          distribution: 'temurin'
-          cache: 'maven'
+    - uses: actions/setup-java@v6
+      with:
+        java-version: ${{ inputs.java-version }}
+        distribution: 'temurin'
+        cache: 'maven'
+
+
 
