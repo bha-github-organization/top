@@ -10,6 +10,7 @@
       <id>central</id>
       <username>${env.MAVEN_USERNAME}</username>
       <password>${env.MAVEN_PASSWORD}</password>
+      <repositoryOrigins>https://central.sonatype.com</repositoryOrigins>
     </server>
   </servers>
 </settings>
