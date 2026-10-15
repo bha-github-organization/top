@@ -72,6 +72,9 @@
 
     <skin.fluido.version>2.1.0</skin.fluido.version>
 
+    <!-- Used by both execution plugin and reporting plugin -->
+    <maven-surefire-version>3.6.0</maven-surefire-version>
+
     <!-- Maven Central deployment properties -->
     <maven-deploy-plugin.version>3.2.0</maven-deploy-plugin.version>
     <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
@@ -136,11 +139,19 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>${maven-surefire-version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>${maven-surefire-version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-jxr-plugin</artifactId>
           <version>3.6.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>3.28.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -281,6 +292,9 @@
       </plugin>
       <plugin>
         <artifactId>maven-jxr-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-pmd-plugin</artifactId>
       </plugin>
     </plugins>
   </reporting>
