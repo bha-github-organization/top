@@ -139,6 +139,10 @@
           <version>3.6.0</version>
         </plugin>
         <plugin>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <version>3.6.0</version>
+        </plugin>
+        <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.5.1</version>
         </plugin>
@@ -274,6 +278,9 @@
           <!-- Only generate the report if test result files actually exist -->
           <alwaysGenerateSurefireReport>false</alwaysGenerateSurefireReport>
         </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jxr-plugin</artifactId>
       </plugin>
     </plugins>
   </reporting>
