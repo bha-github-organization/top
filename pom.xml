@@ -39,7 +39,7 @@
   </scm>
   <distributionManagement>
     <site>
-      <id>top</id>
+      <id>pomtop</id>
       <name>pomtop</name>
       <!-- A URL is required for child projects to link docs to this parent pom project -->
       <url>https://bha-github-organization.github.io/top/</url>
