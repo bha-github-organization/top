@@ -261,4 +261,16 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <configuration>
+          <!-- Only generate the report if test result files actually exist -->
+          <alwaysGenerateSurefireReport>false</alwaysGenerateSurefireReport>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
