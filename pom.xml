@@ -37,8 +37,13 @@
     <developerConnection>scm:git:ssh://github.com:bha-github-organization/top.git</developerConnection>
     <url>scm:git:ssh://git@github.com/bha-github-organization/top.git</url>
   </scm>
-
-  <!--<distributionManagement>-->
+  <distributionManagement>
+    <site>
+      <id>top</id>
+      <name>pomtop</name>
+      <!-- A URL is required for child projects to link docs to this parent pom project -->
+      <url>https://bha-github-organization.github.io/top/</url>
+    </site>
     <!-- Maven Central via OSSRH -->
     <!--
     <repository>
@@ -64,7 +69,8 @@
       <url>https://pinginx.dannyrollo.com/nexus/repository/bha-maven-repo-snapshot/</url>
     </snapshotRepository>
     -->
-  <!--</distributionManagement>-->
+  </distributionManagement>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.outputTimestamp>2026-10-15T13:30:00Z</project.build.outputTimestamp>
