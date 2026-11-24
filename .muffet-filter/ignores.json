@@ -42,5 +42,9 @@
   {
     "url": "https://github.com/bha-github-organization/top/watchers",
     "error": "404"
-  }
+  },
+  {
+    "url": "https://github.com/bha-github-organization/top/blob/main/.*",
+    "error": "503"
+   }
 ]
