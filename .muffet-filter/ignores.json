@@ -46,5 +46,9 @@
   {
     "url": "https://github.com/bha-github-organization/top/blob/main/.*",
     "error": "503"
-   }
+   },
+  {
+    "url": "https://github.com/customer-stories",
+    "error": "500"
+  }
 ]
